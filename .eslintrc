@@ -1,0 +1,22 @@
+{
+    "plugins": ["node"],
+    "extends": ["eslint:recommended", "plugin:node/recommended"],
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "script"
+    },
+    "rules": {
+      "eol-last": 1,
+      "no-console": 0,
+      "no-trailing-spaces": 1,
+      "object-curly-spacing": [ 1, "always" ],
+      "prefer-arrow-callback": 1,
+      "strict": 1
+    }
+  }
+  

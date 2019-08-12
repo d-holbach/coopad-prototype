@@ -1,0 +1,48 @@
+include includes/header.pug
+header
+  h2(class="text-center") New Mediator
+main
+  .container
+    .row
+      .col-sm-12
+        .bs-stepper
+          .bs-stepper-header(role='tablist')
+            // your steps here
+            .step(data-target='#mode-part')
+              button#logins-part-trigger.step-trigger(type='button' role='tab' aria-controls='mode-part')
+                span.bs-stepper-circle 1
+                span.bs-stepper-label Select
+            .line
+            .step(data-target='#settings-part')
+              button#settings-part-trigger.step-trigger(type='button' role='tab' aria-controls='settings-part')
+                span.bs-stepper-circle 2
+                span.bs-stepper-label Configure
+            .line
+            .step(data-target='#start-part')
+              button#start-part-trigger.step-trigger(type='button' role='tab' aria-controls='start-part')
+                span.bs-stepper-circle 3
+                span.bs-stepper-label Start
+          .bs-stepper-content
+            form(action="/mediators" method="post")
+              #mode-part.content.fade(role='tabpanel' aria-labelledby='mode-part-trigger')
+                h4(class="text-center") Select Mode
+                .list-group
+                  button.list-group-item.list-group-item-action.active(type='button' data-mode='0') Democracy
+                  button.list-group-item.list-group-item-action(type='button' data-mode='1') Anarchy
+                  button.list-group-item.list-group-item-action(type='button' data-mode='2') Interval
+                  button.list-group-item.list-group-item-action(type='button' data-mode='3') Random
+                button(class="btn btn-primary btn-lg btn-block" id="next1") Next
+              #settings-part.content.fade(role='tabpanel' aria-labelledby='settings-part-trigger')
+                h4(class="text-center") Interval
+                input(type="range" name="interval" class="custom-range" min="1000" max="30000" value="1000" step="100")
+                h5(class="text-center" id="intervalValue") 1000ms
+                button(class="btn btn-primary btn-lg btn-block next" id="next2") Next
+              #start-part.content.fade(role='tabpanel' aria-labelledby='start-part-trigger')
+                .recap
+                  h5(id="r-mode") Mode: 0
+                  h5(id="r-interval") Interval: 1000ms
+                button(class="btn btn-primary btn-lg btn-block" id="submit") Create
+              input(type="hidden" name="mode" value="0")
+script(src="/public/vendor/bs-stepper/js/bs-stepper.min.js")
+script(src="/public/scripts/mediator.js")
+include includes/footer.pug

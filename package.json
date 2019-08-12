@@ -1,0 +1,32 @@
+{
+  "name": "coopad",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/d-holbach/coopad.git",
+  "author": "<daniel.holbach@smail.th-koeln.de>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bs-stepper": "^1.6.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "postal": "^2.0.5",
+    "pug": "^2.0.4",
+    "shortid": "^2.2.14",
+    "socket.io": "^2.2.0",
+    "uinput": "^1.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-plugin-node": "^9.1.0",
+    "nodemon": "^1.19.1"
+  },
+  "engines": {
+    "node": "8.16.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "watch": "node ./node_modules/nodemon/bin/nodemon.js --ignore 'views' index.js"
+  }
+}

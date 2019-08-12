@@ -1,0 +1,16 @@
+include includes/header.pug
+header
+  h2(class="text-center") Active Mediators
+main
+  .container
+    .row
+      .col-sm-12
+        ul.list-group
+          each mediator, index in mediators
+            li.list-group-item.d-flex.justify-content-between.align-items-center
+              | #{mediator.id}
+              span.badge.badge-primary.badge-pill #{mediator.users.length}
+              input(type="hidden" id="mediatorID" value=mediator.id)
+              a(class="btn btn-primary btn-sm" href="#") Join
+script(src="/public/scripts/join.js")
+include includes/footer.pug

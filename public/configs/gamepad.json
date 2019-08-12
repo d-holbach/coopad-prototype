@@ -1,0 +1,50 @@
+{
+    "axes": {
+        "left": {
+            "x": {
+                "id": 1,
+                "max": 1024,
+                "min": 0,
+                "fuzz": 0,
+                "flat": 0
+            },
+            "y": {
+                "id": 2,
+                "max": 1024,
+                "min": 0,
+                "fuzz": 0,
+                "flat": 0
+            }
+        }
+    },
+    "buttons": {
+        "action": {
+            "north": {
+                "id": 3,
+                "label": "X"
+            },
+            "south": {
+                "id": 4,
+                "label": "B"
+            },
+            "west": {
+                "id": 5,
+                "label": "Y"
+            },
+            "east": {
+                "id": 6,
+                "label": "A"
+            }
+        },
+        "system": {
+            "start": {
+                "id": 7,
+                "label": "Start"
+            },
+            "select" : {
+                "id": 8,
+                "label": "Select"
+            }
+        }
+    }
+}
