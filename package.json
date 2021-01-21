@@ -14,7 +14,7 @@
     "postal": "^2.0.5",
     "pug": "^2.0.4",
     "shortid": "^2.2.14",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "uinput": "^1.1.1"
   },
   "devDependencies": {
